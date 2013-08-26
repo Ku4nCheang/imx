@@ -1,11 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-@font-face {
-  font-family: "fontawesome";
-  src: url("../fonts/fontawesome.eot");
-  src: url("../fonts/fontawesome.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome.svg#fontawesome") format("svg"), url("../fonts/fontawesome.woff") format("woff"), url("../fonts/fontawesome.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
 body, html {
   font-size: 100%;
   padding: 0;
@@ -13,7 +6,6 @@ body, html {
   height: 100%; }
 
 body {
-  background: #f6f6f6;
   font-weight: 300;
   font-size: 15px;
   color: #333333;
@@ -71,14 +63,18 @@ a {
   border-radius: 0; }
 
 .page-header {
-  background: #f3f3f3;
-  border: 1px solid #e3e3e3;
-  color: #333333;
-  padding-bottom: 0; }
+  background-image: -webkit-linear-gradient( #f9f9f9 0, #f3f3f3 100%);
+  background-image: linear-gradient( #f9f9f9 0, #f3f3f3 100%);
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 0;
+  margin-bottom: 10px; }
   .page-header .content {
     padding: 0 20px; }
     .page-header .content h3 {
       display: inline-block; }
+      .page-header .content h3 i::after {
+        content: " "; }
     .page-header .content button {
       margin-top: 16px; }
   .page-header span {
@@ -87,3 +83,30 @@ a {
     color: #999999; }
     .page-header span:before {
       content: " "; }
+
+.bar {
+  background-image: -webkit-linear-gradient( #f9f9f9 0, #f3f3f3 100%);
+  background-image: linear-gradient( #f9f9f9 0, #f3f3f3 100%);
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 0;
+  margin-bottom: 10px; }
+
+.search input {
+  position: relative;
+  background: rgba(0, 0, 0, 0);
+  border: 0px;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 20px;
+  width: 50%;
+  left: 24.5%;
+  margin: 10px 0 0 0;
+  padding-top: 15px;
+  border-bottom: 1px solid #efefef;
+  text-align: center; }
+  .search input:focus {
+    background: rgba(0, 0, 0, 0);
+    border-radius: 0;
+    transition: none;
+    box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0); }

@@ -164,12 +164,12 @@ $.fn.imagesLoaded = function( callback ) {
 var Grid = (function() {
 
 		// list of items
-	var $grid = $( '#og-grid' ),
+	var $grid = $('ul#og-grid'),
 
 		// the items
 		$items = $grid.children( 'li' ),
 		//width for each item
-		itemWidth = 220,
+		itemWidth = 200,
 		// current expanded item's index
 		current = -1,
 		// position (top) of the expanded item
@@ -200,7 +200,7 @@ var Grid = (function() {
 		};
 
 	function init( config ) {
-		
+
 		// the settings..
 		settings = $.extend( true, {}, settings, config );
 
@@ -221,7 +221,7 @@ var Grid = (function() {
 
 		$(window).resize(function() {
 
-		  layoutItems();
+			layoutItems();
 
 		});
 
@@ -237,11 +237,13 @@ var Grid = (function() {
 			//calculate number of items if each items width is equal to preset width
 			numOfItems = Math.floor(gridWidth / (itemWidth + itemMargin)),
 			//calculate the width that fits the container
-			newItemWidth = Math.floor((gridWidth - (numOfItems - 1) * itemMargin) / numOfItems) - 6;
+			newItemWidth = Math.floor((gridWidth - numOfItems * itemMargin) / numOfItems) - 4;
 
 		//change each item width to new calculated width
-		$items.each( function() {
-			$(this).css( "width", newItemWidth + "px");
+		$grid.each(function(){
+			$(this).children( 'li' ).each(function(){
+				$(this).css( "width", newItemWidth + "px");
+			});
 		});
 
 	}
@@ -306,10 +308,10 @@ var Grid = (function() {
 			hidePreview();
 			return false;
 		} ).children( 'a' ).on( 'click', function(e) {
-
 			var $item = $( this ).parent();
 			// check if item already opened
-			current === $item.index() ? hidePreview() : showPreview( $item );
+			current === indexOfItem($item) ? hidePreview() : showPreview( $item );
+
 			return false;
 
 		} );
@@ -362,10 +364,33 @@ var Grid = (function() {
 		$.removeData( this, 'preview' );
 	}
 
+	function indexOfItem($item) {
+
+		var gridIndex = $grid.index($item.parent()),
+			_index = 0;
+
+		$grid.each(function(index) {
+
+			if (index == gridIndex) {
+
+				_index += $item.index();
+
+			}else if (index < gridIndex) {
+
+				_index += $(this).children("li").size();
+
+			}
+
+		});
+
+		return _index;
+	}
+
 	// the preview obj / overlay
 	function Preview( $item ) {
+
 		this.$item = $item;
-		this.expandedIdx = this.$item.index();
+		this.expandedIdx = indexOfItem($item);
 		this.create();
 		this.update();
 	}
@@ -397,6 +422,7 @@ var Grid = (function() {
 			
 			// if already expanded remove class "og-expanded" from current item and add it to new item
 			if( current !== -1 ) {
+
 				var $currentItem = $items.eq( current );
 				$currentItem.removeClass( 'og-expanded' );
 				this.$item.addClass( 'og-expanded' );
@@ -405,7 +431,7 @@ var Grid = (function() {
 			}
 
 			// update current value
-			current = this.$item.index();
+			current = indexOfItem(this.$item);
 
 			// update preview´s content
 			var $itemEl = this.$item.children( 'a' ),
