@@ -101,7 +101,8 @@
       overflow: hidden;
       max-height: 18px;
       text-overflow: ellipsis;
-      white-space: nowrap; }
+      white-space: nowrap;
+      margin: 3px 0 2px 0; }
     .og-grid li p {
       font-size: 12px;
       margin-bottom: 0; }

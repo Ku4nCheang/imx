@@ -18,15 +18,11 @@ a {
   a:hover {
     color: black; }
 
-.main, header {
+.main {
   color: #333333;
   font-weight: 300;
   line-height: 1.5;
   text-align: justify; }
-
-header {
-  position: fixed;
-  z-index: 900; }
 
 .wrapper {
   padding-left: 76px; }
@@ -86,12 +82,13 @@ a {
     .page-header span:before {
       content: " "; }
 
-.btn-more {
+.btn-purple {
   background: #9e60b7;
   border-color: #67377a;
   color: white; }
-  .btn-more:hover {
-    color: #e6e6e6; }
+  .btn-purple:hover {
+    color: #e6e6e6;
+    background: #613473; }
 
 .bar {
   background-image: -webkit-linear-gradient( #f9f9f9 0, #f3f3f3 100%);
@@ -164,6 +161,59 @@ a {
     .overlay button:hover {
       background: #a971bf;
       color: white; }
+
+.form-control {
+  border-radius: 0;
+  margin-bottom: 6px; }
+  .form-control:focus {
+    border: 1px solid #9e60b7;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(132, 116, 214, 0.6); }
+
+.navbar-default {
+  background: white; }
+
+.navbar-default .navbar-nav > .active > a {
+  background: white;
+  border-bottom: 2px solid purple; }
+  .navbar-default .navbar-nav > .active > a:hover {
+    background: white; }
+
+.navbar-nav > li > a {
+  padding: 34px 15px 18px 15px; }
+
+header {
+  padding: 0 20px;
+  margin-bottom: 40px; }
+  header h1 {
+    margin-top: 45px;
+    font-size: 60px; }
+  header p {
+    font-size: 24px;
+    color: #999999; }
+  header h3 span {
+    font-size: 16px;
+    color: #999999;
+    font-weight: normal; }
+
+footer[role="contentinfo"] {
+  padding: 15px 0 0 0;
+  font-size: 14px;
+  border-top: 1px solid #dddddd; }
+  footer[role="contentinfo"] ul {
+    margin: 0;
+    padding: 0; }
+  footer[role="contentinfo"] nav ul li {
+    display: inline;
+    margin: 0 10px 0 0;
+    padding: 0 10px 0 0;
+    font-weight: bold;
+    border-right: 1px solid #cccccc; }
+    footer[role="contentinfo"] nav ul li:last-child {
+      margin: 0;
+      padding: 0;
+      border: none; }
+  footer[role="contentinfo"] p {
+    margin: 10px 0; }
 
 .search input {
   position: relative;
