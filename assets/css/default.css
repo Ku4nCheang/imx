@@ -90,14 +90,6 @@ a {
     color: #e6e6e6;
     background: #613473; }
 
-.bar {
-  background-image: -webkit-linear-gradient( #f9f9f9 0, #f3f3f3 100%);
-  background-image: linear-gradient( #f9f9f9 0, #f3f3f3 100%);
-  border-top: 1px solid #e3e3e3;
-  border-bottom: 1px solid #e3e3e3;
-  padding-bottom: 0;
-  margin-bottom: 10px; }
-
 .og-expander input {
   background: #f3f3f3;
   border: 0px;
@@ -215,21 +207,27 @@ footer[role="contentinfo"] {
   footer[role="contentinfo"] p {
     margin: 10px 0; }
 
-.search input {
-  position: relative;
-  background: rgba(0, 0, 0, 0);
-  border: 0px;
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 20px;
-  width: 50%;
-  left: 24.5%;
-  margin: 10px 0 0 0;
-  padding-top: 15px;
-  border-bottom: 1px solid #efefef;
-  text-align: center; }
-  .search input:focus {
+.search .bar {
+  background: white;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+  padding: 0 20px;
+  margin-top: 37px; }
+  .search .bar input {
+    position: relative;
     background: rgba(0, 0, 0, 0);
+    border: 0px;
     border-radius: 0;
-    transition: none;
-    box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0); }
+    box-shadow: none;
+    font-size: 20px;
+    width: 100%;
+    padding-top: 15px;
+    border-bottom: 1px solid #efefef;
+    text-align: center;
+    font-weight: 200; }
+    .search .bar input:focus {
+      background: rgba(0, 0, 0, 0);
+      border-radius: 0;
+      transition: none;
+      box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0);
+      border-bottom: 1px solid #c9a6d7; }
