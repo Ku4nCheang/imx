@@ -283,7 +283,7 @@ var Grid = (function() {
 		// when clicking an item, show the preview with the item´s info and large image.
 		// close the item if already expanded.
 		// also close if clicking on the item´s cross
-		initItemsEvents( $items );
+		// initItemsEvents( $items );
 		
 		// on window resize get the window´s size again
 		// reset some values..
@@ -318,7 +318,7 @@ var Grid = (function() {
 	}
 
 	function getWinSize() {
-		winsize = { width : $window.width(), height : $window.height() };
+		winsize = { width : $window.width(), height : settings.minHeight };
 	}
 
 	function showPreview( $item ) {
@@ -427,7 +427,7 @@ var Grid = (function() {
 				$currentItem.removeClass( 'og-expanded' );
 				this.$item.addClass( 'og-expanded' );
 				// position the preview correctly
-				this.positionPreview();
+				// this.positionPreview();
 			}
 
 			// update current value
@@ -475,7 +475,7 @@ var Grid = (function() {
 				// set the height for the preview and the item
 				this.setHeights();
 				// scroll to position the preview in the right place
-				this.positionPreview();
+				// this.positionPreview();
 			}, this ), 25 );
 
 		},

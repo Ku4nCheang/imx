@@ -102,10 +102,10 @@
       max-height: 18px;
       text-overflow: ellipsis;
       white-space: nowrap; }
-    .og-grid li .detail {
+    .og-grid li p {
       font-size: 12px;
       margin-bottom: 0; }
-      .og-grid li .detail span {
+      .og-grid li p span {
         color: #67377a; }
     .og-grid li > a {
       border: none;
@@ -113,7 +113,12 @@
       display: block;
       position: relative;
       height: 144px;
-      width: 100%; }
+      width: 100%;
+      padding: 3px;
+      border: 1px solid #dddddd; }
+      .og-grid li > a:hover {
+        padding: 3px;
+        border: 1px solid #b483c7; }
       .og-grid li > a img {
         border: none;
         outline: none;
@@ -132,24 +137,21 @@
       border-bottom-color: #e3e3e3;
       border-width: 15px;
       left: 50%;
-      margin: 25px 0 0 -15px; }
+      margin: 30px 0 0 -15px; }
 
 .og-expander {
   position: absolute;
-  background: #e3e3e3;
+  background: #f3f3f3;
   top: auto;
   left: 0;
   width: 100%;
-  margin: 15px 0 0 0;
+  margin: 10px 0 0 0;
   text-align: left;
   height: 0;
   overflow: hidden;
   border-bottom: 1px solid #cccccc; }
 
 .og-expander-inner {
-  padding: 80px 30px 50px 45px;
-  max-width: 1148px;
-  margin: 0 auto;
   height: 100%; }
 
 .og-close {
@@ -188,36 +190,33 @@
 .og-fullimg {
   width: 50%;
   float: left;
-  height: auto;
+  height: 100%;
   overflow: hidden;
   position: relative; }
 
 .og-details {
-  width: 50%;
-  float: left;
+  width: 100%;
   height: 100%;
   overflow: hidden;
-  position: relative;
-  padding: 0 40px 0 20px; }
+  position: relative; }
 
 .og-fullimg {
   text-align: center; }
   .og-fullimg img {
     display: inline-block;
     max-height: 100%;
-    max-width: 100%;
-    width: 100%; }
+    max-width: 100%; }
 
 .og-details h3 {
   font-weight: 300;
-  font-size: 42px;
-  margin-top: 0;
+  font-size: 52px;
+  padding: 40px 0 10px;
   margin-bottom: 10px;
   color: #333333; }
 .og-details p {
-  font-weight: 200;
-  font-size: 20px;
-  line-height: 26px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
   color: #666666; }
 .og-details a {
   font-weight: 700;
@@ -238,8 +237,6 @@
   .og-details a:hover {
     background: #666666;
     color: white; }
-.og-details button {
-  font-size: 24px; }
 
 .og-loading {
   width: 20px;
