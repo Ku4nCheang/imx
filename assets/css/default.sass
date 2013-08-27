@@ -12,7 +12,7 @@ body, html
 
 body
   // font-family: 'Lato', Calibri, Arial, sans-serif
-  //background: url(../img/noise.gif)
+  // background: url(../img/noise.gif)
   font-weight: 300
   font-size: 15px
   color: #333
@@ -41,7 +41,11 @@ header
 
 .wrapper
   padding-left: 76px
-
+  .container
+    max-width: 100%
+    padding: 0
+    width: 100%
+    position: relative
 
 .icon-drop:before, .icon-arrow-left:before
   font-family: 'fontawesome'
@@ -63,9 +67,7 @@ a
   color: #555
   text-decoration: none
 
-.container
-  width: 100%
-  position: relative
+
 
 
 .main > p
@@ -82,19 +84,21 @@ a
   border-top: 1px solid #e3e3e3
   border-bottom: 1px solid #e3e3e3
   padding-bottom: 0
-  margin-bottom: 10px
+  margin: 0px 0 10px 0
+
 
   .content
     padding: 0 20px
 
     h3
       display: inline-block
+      margin: 24px 0
 
       i::after
         content: " "
 
     button
-      margin-top: 16px
+      margin-top: 20px
 
   span
     font-weight: normal
@@ -111,6 +115,13 @@ a
   border-bottom: 1px solid #e3e3e3
   padding-bottom: 0
   margin-bottom: 10px 
+
+.input-group
+  margin-bottom: 10px
+  input
+    border-radius: 0
+    font-size: 27px
+    height: 48px
 
 .search
   input

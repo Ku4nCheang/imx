@@ -102,10 +102,10 @@
       max-height: 18px;
       text-overflow: ellipsis;
       white-space: nowrap; }
-    .og-grid li p {
+    .og-grid li .detail {
       font-size: 12px;
       margin-bottom: 0; }
-      .og-grid li p span {
+      .og-grid li .detail span {
         color: #67377a; }
     .og-grid li > a {
       border: none;
@@ -132,7 +132,7 @@
       border-bottom-color: #e3e3e3;
       border-width: 15px;
       left: 50%;
-      margin: 30px 0 0 -15px; }
+      margin: 25px 0 0 -15px; }
 
 .og-expander {
   position: absolute;
@@ -140,14 +140,16 @@
   top: auto;
   left: 0;
   width: 100%;
-  margin: 10px 0 0 0;
+  margin: 15px 0 0 0;
   text-align: left;
   height: 0;
   overflow: hidden;
   border-bottom: 1px solid #cccccc; }
 
 .og-expander-inner {
-  padding: 50px 30px 50px 105px;
+  padding: 80px 30px 50px 45px;
+  max-width: 1148px;
+  margin: 0 auto;
   height: 100%; }
 
 .og-close {
@@ -186,7 +188,7 @@
 .og-fullimg {
   width: 50%;
   float: left;
-  height: 100%;
+  height: auto;
   overflow: hidden;
   position: relative; }
 
@@ -203,18 +205,19 @@
   .og-fullimg img {
     display: inline-block;
     max-height: 100%;
-    max-width: 100%; }
+    max-width: 100%;
+    width: 100%; }
 
 .og-details h3 {
   font-weight: 300;
-  font-size: 52px;
-  padding: 40px 0 10px;
+  font-size: 42px;
+  margin-top: 0;
   margin-bottom: 10px;
   color: #333333; }
 .og-details p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 26px;
   color: #666666; }
 .og-details a {
   font-weight: 700;
@@ -235,6 +238,8 @@
   .og-details a:hover {
     background: #666666;
     color: white; }
+.og-details button {
+  font-size: 24px; }
 
 .og-loading {
   width: 20px;
