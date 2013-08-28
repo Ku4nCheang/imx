@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 body, html {
   font-size: 100%;
   padding: 0;
@@ -121,37 +120,30 @@ a {
   height: 100%;
   width: 100%;
   background: rgba(255, 255, 255, 0.96);
-  z-index: 999;
-  text-align: center;
-  img-display: block;
-  img-margin-top: 40px; }
-  .overlay input {
-    margin: 40px auto 0 auto;
-    background: rgba(255, 255, 255, 0);
-    border: 0px;
-    border-radius: 0;
-    font-size: 27px;
-    height: 48px;
-    color: #333333;
-    text-align: center;
-    border-bottom: 1px solid #dddddd;
-    box-shadow: none; }
-    .overlay input:focus {
-      border-radius: 0;
-      transition: none;
-      border-bottom: 1px solid #c9a6d7;
-      box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0); }
-  .overlay button {
-    display: block;
-    margin: 20px auto;
+  z-index: 9999;
+  text-align: center; }
+  .overlay img {
+    margin-top: 40px; }
+  .overlay table tr td {
+    padding: 0;
+    border: 1px solid #b483c7; }
+  .overlay table tr td.clean {
+    border: 0px; }
+  .overlay table tr .link {
+    border-right: none;
+    font-size: 22px;
     width: 100%;
-    font-size: 32px;
-    padding: 40px 0;
-    border: 0px;
-    border-bottom: 1px solid #dddddd;
-    background: rgba(255, 255, 255, 0); }
+    height: 48px; }
+  .overlay button {
+    height: 50px;
+    display: block;
+    width: 100%;
+    font-size: 24px;
+    border: none;
+    background: #a971bf;
+    color: white; }
     .overlay button:hover {
-      background: #a971bf;
+      background: #85479d;
       color: white; }
 
 .form-control {
@@ -229,5 +221,5 @@ footer[role="contentinfo"] {
       background: rgba(0, 0, 0, 0);
       border-radius: 0;
       transition: none;
-      box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0);
+      box-shadow: none;
       border-bottom: 1px solid #c9a6d7; }
