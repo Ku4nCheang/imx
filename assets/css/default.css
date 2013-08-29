@@ -119,39 +119,63 @@ a {
   top: 0;
   height: 100%;
   width: 100%;
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(0, 0, 0, 0.9);
   z-index: 9999;
-  text-align: center; }
-  .overlay img {
-    margin-top: 40px; }
-  .overlay table tr td {
-    padding: 0;
-    border: 1px solid #b483c7; }
-  .overlay table tr td.clean {
-    border: 0px; }
-  .overlay table tr .link {
-    border-right: none;
-    font-size: 22px;
-    width: 100%;
-    height: 48px; }
+  text-align: center;
+  color: white; }
+  .overlay a {
+    max-width: 974px;
+    margin: 0 auto;
+    display: block;
+    padding: 8px;
+    border: 1px solid #444444; }
+    .overlay a:hover {
+      border: 1px solid #b483c7; }
+    .overlay a img {
+      width: 100%; }
+  .overlay table {
+    max-width: 974px;
+    margin: 0 auto; }
+    .overlay table tr:hover td {
+      border: 1px solid #b483c7;
+      border-right: none;
+      -webkit-transition: border-color ease-in-out 0.15s;
+      -moz-transition: border-color ease-in-out 0.15s;
+      transition: border-color ease-in-out 0.15s;
+      pointer: auto; }
+    .overlay table tr td {
+      padding: 0;
+      border: 1px solid #444444; }
+      .overlay table tr td > div {
+        overflow: hidden;
+        height: 30px;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+    .overlay table tr td.clean {
+      border: 0px; }
+    .overlay table tr .link {
+      border-right: none;
+      font-size: 22px;
+      padding: 0 20px;
+      height: 48px;
+      width: 40%; }
   .overlay button {
     height: 50px;
     display: block;
     width: 100%;
     font-size: 24px;
     border: none;
-    background: #a971bf;
+    background: #85479d;
     color: white; }
     .overlay button:hover {
-      background: #85479d;
+      background: #763f8c;
       color: white; }
 
 .form-control {
   border-radius: 0;
   margin-bottom: 6px; }
   .form-control:focus {
-    border: 1px solid #9e60b7;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(132, 116, 214, 0.6); }
+    border: 1px solid #9e60b7; }
 
 .navbar-default {
   background: white; }
