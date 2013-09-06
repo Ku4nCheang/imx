@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 .cbp-vimenu {
   position: fixed;
-  overflow: hidden;
+  overflow: visible;
   top: 0;
   left: 0;
   height: 100%;

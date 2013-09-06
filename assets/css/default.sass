@@ -2,7 +2,6 @@
 @import "bourbon/bourbon"
 
 
-
 body, html
   font-size: 100%
   padding: 0
@@ -19,11 +18,20 @@ body
   overflow: scroll
   overflow-x: hidden
 
+body.modal-open
+  margin-right: 0
+
 a
   color: #f0f0f0
   text-decoration: none
   &:hover
     color: #000
+
+
+div[class="tooltip-inner"]
+  min-width: 160px
+  font-size: 16px
+  font-weight: 400
 
 .main
 

@@ -19,15 +19,25 @@
 	</head>
 	<body>
 		<ul class="cbp-vimenu">
-			<li><a href="#" class="icon icon-logo">Logo</a></li>
-			<li><a href="#" class="icon-cloud-upload"></a></li>
-			<li><a href="search.html" class="icon-search"></a></li>
-			<li><a href="#" class="icon icon-star"></a></li>
-			<li><a href="#" class="icon icon-gittip"></a></li>
-			<li><a href="#" class="icon icon-rocket"></a></li>
+			<li>
+				<a href="#" class="icon icon-logo">Logo</a>
+			</li>
+			<li>
+				<a data-toggle="modal" href="#myModal" rel="tooltip" class="icon-share-alt" data-placement="right" title="Share dialogue image"></a>
+			</li>
+			<li>
+				<a href="search.html" class="icon-search" rel="tooltip" data-toggle="tooltip" data-placement="right" title="Search image" data-original-title="Tooltip on right"></a>
+			</li>
+			<li>
+				<a href="#" class="icon-picture" rel="tooltip" data-toggle="tooltip" data-placement="right" title="" data-original-title="Browse"></a>
+			</li>
 			<!-- <li class="cbp-vicurrent"><a href="#" class="icon-pencil">Pencil</a></li> -->
-			<li><a href="#" class="icon icon-archive"></a></li>
-			<li><a href="#" class="icon-user"></a></li>
+			<li>
+				<a href="#" class="icon icon-archive" rel="tooltip" data-placement="right" data-toggle="tooltip" title="My collection"></a>
+			</li>
+			<li>
+				<a href="#" class="icon-user" rel="tooltip" data-placement="right" data-toggle="tooltip" title="first tooltip">User</a>
+			</li>
 			
 		</ul>
 		<div class="wrapper">
@@ -305,13 +315,37 @@
 			</div>
 		</div>
 
+	  <!-- Modal -->
+	  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	    <div class="modal-dialog">
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	          <h4 class="modal-title">Share dialogue image</h4>
+	        </div>
+	        <div class="modal-body">
+	          <div class="form-group">
+					    <label for="shareImageURL">Image url</label>
+					    <input type="text" class="form-control" id="shareImageURL" placeholder="http://example.com/image.jpg">
+					  	<p class="help-block">sosad</p>
+					  </div>
+	        </div>
+	        </p>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+	          <button type="button" class="btn btn-purple">Share</button>
+	        </div>
+	      </div><!-- /.modal-content -->
+	    </div><!-- /.modal-dialog -->
+	  </div><!-- /.modal -->div>
 
-		<script src="assets/js/jquery-2.0.3.min.js"></script>
+		<script src="assets/js/jquery.js"></script>
 		<script src="assets/js/grid.js"></script>
 		<script src="assets/js/bootstrap3.0.min.js"></script>
 		<script>
 			$(function() {
 				Grid.init();
+				$("[rel='tooltip']").tooltip();
 			});
 		</script>
 	</body>
