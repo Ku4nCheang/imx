@@ -122,62 +122,61 @@ a {
   width: 50%; }
 
 .overlay {
-  padding: 40px 20px;
+  padding: 20px 20px;
   position: absolute;
   top: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.9);
+  background: #f3f3f3;
   z-index: 9999;
   text-align: center;
-  color: white; }
+  color: #333333; }
   .overlay a {
-    max-width: 974px;
     margin: 0 auto;
     display: block;
     padding: 8px;
-    border: 1px solid #444444; }
+    border: 1px solid #dddddd;
+    background: white;
+    text-decoration: none;
+    cursor: pointer; }
     .overlay a:hover {
-      border: 1px solid #b483c7; }
+      box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.15); }
     .overlay a img {
-      width: 100%; }
-  .overlay table {
-    max-width: 974px;
-    margin: 0 auto; }
-    .overlay table tr:hover td {
-      border: 1px solid #b483c7;
-      border-right: none;
-      -webkit-transition: border-color ease-in-out 0.15s;
-      -moz-transition: border-color ease-in-out 0.15s;
-      transition: border-color ease-in-out 0.15s;
-      pointer: auto; }
-    .overlay table tr td {
-      padding: 0;
-      border: 1px solid #444444; }
-      .overlay table tr td > div {
-        overflow: hidden;
-        height: 30px;
-        text-overflow: ellipsis;
-        white-space: nowrap; }
-    .overlay table tr td.clean {
-      border: 0px; }
-    .overlay table tr .link {
-      border-right: none;
-      font-size: 22px;
-      padding: 0 20px;
-      height: 48px;
-      width: 40%; }
-  .overlay button {
-    height: 50px;
-    display: block;
-    width: 100%;
-    font-size: 24px;
-    border: none;
-    background: #85479d;
-    color: white; }
-    .overlay button:hover {
-      background: #763f8c;
-      color: white; }
+      width: 100%;
+      max-width: 640px; }
+  .overlay ul {
+    padding: 0;
+    list-style: none;
+    margin: 0 auto;
+    margin-top: 40px; }
+    .overlay ul li {
+      margin-bottom: 20px; }
+    .overlay ul li > a {
+      cursor: pointer;
+      background: white;
+      font-size: 18px;
+      padding: 16px 12px;
+      position: relative; }
+      .overlay ul li > a .copy-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background: rgba(103, 55, 122, 0.9);
+        text-align: center;
+        opacity: 0;
+        -webkit-transition: opacity, 0.3s;
+        -moz-transition: opacity, 0.3s;
+        transition: opacity, 0.3s; }
+        .overlay ul li > a .copy-overlay p {
+          font-size: 18px;
+          padding: 14px 0px;
+          color: white;
+          font-weight: bold; }
+      .overlay ul li > a:hover .copy-overlay {
+        opacity: 1; }
 
 .form-control {
   border-radius: 0;
@@ -255,3 +254,12 @@ footer[role="contentinfo"] {
       transition: none;
       box-shadow: none;
       border-bottom: 1px solid #c9a6d7; }
+
+/* Portrait tablet to landscape and desktop */
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  .overlay ul > li > a {
+    font-size: 16px; } }
+@media (max-width: 480px) {
+  .overlay ul > li > a {
+    font-size: 100%; } }
