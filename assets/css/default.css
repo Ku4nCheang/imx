@@ -138,7 +138,8 @@ a {
     border: 1px solid #dddddd;
     background: white;
     text-decoration: none;
-    cursor: pointer; }
+    cursor: pointer;
+    overflow: hidden; }
     .overlay a:hover {
       box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.15); }
     .overlay a img {
